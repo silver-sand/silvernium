@@ -1,0 +1,183 @@
+/**
+ * @name LiquidOS 26 (Vencord)
+ * @description iOS-inspired liquid glass Discord theme with frosted panels, soft depth, and luminous accents.
+ * @version 2.0.0
+ * @author silvernium
+ */
+
+:root {
+  --lios-bg-0: #090b14;
+  --lios-bg-1: #11182c;
+  --lios-bg-2: #1a2540;
+
+  --lios-glass: rgba(255, 255, 255, 0.1);
+  --lios-glass-strong: rgba(255, 255, 255, 0.16);
+  --lios-glass-border: rgba(255, 255, 255, 0.28);
+  --lios-glass-edge: rgba(255, 255, 255, 0.45);
+
+  --lios-text: #f7f9ff;
+  --lios-text-muted: #c8d2ee;
+  --lios-accent: #88d2ff;
+  --lios-accent-2: #c3a6ff;
+
+  --lios-radius-xl: 22px;
+  --lios-radius-lg: 18px;
+  --lios-radius-md: 14px;
+  --lios-radius-sm: 10px;
+
+  --lios-shadow-soft: 0 8px 30px rgba(4, 8, 20, 0.42);
+  --lios-shadow-float: 0 20px 45px rgba(5, 10, 28, 0.5);
+}
+
+/* Dynamic liquid background */
+body,
+.appMount,
+.bg__12180,
+.app_a3002d {
+  background:
+    radial-gradient(55rem 35rem at 16% 18%, rgba(136, 210, 255, 0.2), transparent 55%),
+    radial-gradient(52rem 30rem at 86% 12%, rgba(195, 166, 255, 0.22), transparent 58%),
+    radial-gradient(40rem 22rem at 50% 100%, rgba(108, 163, 255, 0.16), transparent 70%),
+    linear-gradient(155deg, var(--lios-bg-0), var(--lios-bg-1) 52%, var(--lios-bg-2));
+  color: var(--lios-text);
+}
+
+/* Unified glass containers */
+.sidebar_a4d4d9,
+.chat_f75fb0,
+.container__133bf,
+.membersWrap_c8ffbb,
+.container__9293f,
+.privateChannels__35e86,
+.nowPlayingColumn__133bf,
+.panels_c48ade,
+.container_f369db {
+  background: linear-gradient(145deg, var(--lios-glass-strong), var(--lios-glass)) !important;
+  border: 1px solid var(--lios-glass-border);
+  border-radius: var(--lios-radius-xl);
+  backdrop-filter: blur(18px) saturate(145%);
+  -webkit-backdrop-filter: blur(18px) saturate(145%);
+  box-shadow: var(--lios-shadow-soft);
+}
+
+/* Inner highlighted lip for floating glass feel */
+.sidebar_a4d4d9,
+.chat_f75fb0,
+.membersWrap_c8ffbb,
+.privateChannels__35e86 {
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar_a4d4d9::before,
+.chat_f75fb0::before,
+.membersWrap_c8ffbb::before,
+.privateChannels__35e86::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.32), transparent 40%);
+  opacity: 0.45;
+}
+
+/* Message input and composer */
+.form_f75fb0,
+.channelTextArea_f75fb0,
+.scrollableContainer__74017,
+.themedBackground__74017 {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.08)) !important;
+  border-radius: var(--lios-radius-lg) !important;
+  border: 1px solid var(--lios-glass-edge);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.34), var(--lios-shadow-soft);
+}
+
+/* Top title bar refinement */
+.title_f75fb0,
+.container__9293f .header_fd6364 {
+  background: transparent !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Buttons and pills */
+.lookFilled__201d5.colorBrand__201d5,
+.rolePillBorder__5f725,
+.numberBadge__2b1f5,
+.newMessagesBar__0f481 {
+  background: linear-gradient(130deg, var(--lios-accent), var(--lios-accent-2)) !important;
+  color: #071227 !important;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 999px;
+  box-shadow: 0 10px 25px rgba(136, 210, 255, 0.35);
+}
+
+.lookFilled__201d5.colorBrand__201d5:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+}
+
+/* Mentions and selected channels */
+.mention,
+.modeSelected__2ea32 .link__2ea32,
+.interactive_bf202d:hover,
+.channel__972a0:hover {
+  background: linear-gradient(140deg, rgba(136, 210, 255, 0.22), rgba(195, 166, 255, 0.2)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: var(--lios-text) !important;
+  border-radius: var(--lios-radius-sm);
+}
+
+/* User popouts and modals */
+.userPopoutOuter_c69a7b,
+.root__49fc1,
+.menu_c1e9c4,
+.container__551b0 {
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.09)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  backdrop-filter: blur(20px) saturate(135%);
+  -webkit-backdrop-filter: blur(20px) saturate(135%);
+  border-radius: var(--lios-radius-lg);
+  box-shadow: var(--lios-shadow-float);
+}
+
+/* Text hierarchy */
+.titleWrapper_fc4f04,
+.nameTag__37e49,
+.username_f3939d,
+.topic__6ec1a,
+.headerText__99e7c {
+  color: var(--lios-text) !important;
+}
+
+.subtext__339d0,
+.memberInner__5d473,
+.modeMuted__2ea32 .name__2ea32,
+.subtitleContainer_f75fb0 {
+  color: var(--lios-text-muted) !important;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--lios-accent), var(--lios-accent-2));
+  border-radius: 999px;
+  border: 2px solid rgba(8, 13, 30, 0.35);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(9, 13, 28, 0.34);
+}
+
+/* Optional reduced transparency fallback */
+@media (prefers-reduced-transparency: reduce) {
+  .sidebar_a4d4d9,
+  .chat_f75fb0,
+  .container__133bf,
+  .membersWrap_c8ffbb,
+  .container__9293f,
+  .privateChannels__35e86 {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(27, 36, 62, 0.94) !important;
+  }
+}
