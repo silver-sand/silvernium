@@ -1,0 +1,87 @@
+/* Silvernium local main.css (ClearVision-style editable base) */
+@keyframes cv-channel-select{from{right:100%}to{right:0}}
+@keyframes cv-card-loading{0%{opacity:.66}50%{opacity:.33}100%{opacity:.66}}
+
+:root{
+  --main-color:#2780e6;
+  --hover-color:#1e63b3;
+  --success-color:#43b581;
+  --danger-color:#982929;
+  --online-color:#43b581;
+  --idle-color:#faa61a;
+  --dnd-color:#982929;
+  --streaming-color:#593695;
+  --offline-color:#808080;
+
+  --background-shading-percent:100%;
+  --background-image:url(https://clearvision.github.io/images/sapphire.jpg);
+  --background-position:center;
+  --background-size:cover;
+  --background-attachment:fixed;
+  --background-filter:saturate(calc(var(--saturation-factor,1) * 1));
+
+  --user-popout-image:var(--background-image);
+  --user-popout-position:var(--background-position);
+  --user-popout-size:var(--background-size);
+  --user-popout-attachment:var(--background-attachment);
+  --user-popout-filter:var(--background-filter);
+
+  --user-modal-image:var(--background-image);
+  --user-modal-position:var(--background-position);
+  --user-modal-size:var(--background-size);
+  --user-modal-attachment:var(--background-attachment);
+  --user-modal-filter:var(--background-filter);
+
+  --main-font:"gg sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --code-font:Consolas,"gg mono","Liberation Mono",Menlo,Courier,monospace;
+
+  --channel-normal:var(--interactive-text-default);
+  --channel-muted:var(--interactive-muted);
+  --channel-hover:var(--interactive-text-hover);
+  --channel-selected:var(--interactive-text-active);
+  --channel-selected-bg:var(--main-color);
+  --channel-unread:var(--main-color);
+  --channel-unread-hover:var(--hover-color);
+  --focus-color:var(--main-color);
+
+  --hsl-main-color:hsl(from var(--main-color) h calc(var(--saturation-factor,1) * s) l/alpha);
+  --hsl-hover-color:hsl(from var(--hover-color) h calc(var(--saturation-factor,1) * s) l/alpha);
+  --hsl-success-color:hsl(from var(--success-color) h calc(var(--saturation-factor,1) * s) l/alpha);
+  --hsl-danger-color:hsl(from var(--danger-color) h calc(var(--saturation-factor,1) * s) l/alpha);
+}
+
+:is(.theme-light,.theme-dark .theme-light){--background-shading:rgba(252,252,252,.3);--card-shading:rgba(252,252,252,.3);--popout-shading:rgba(252,252,252,.7);--modal-shading:rgba(252,252,252,.5);--input-shading:rgba(0,0,0,.3)}
+:is(.theme-dark,.theme-light .theme-dark){--background-shading:rgba(0,0,0,.4);--card-shading:rgba(0,0,0,.2);--popout-shading:rgba(0,0,0,.6);--modal-shading:rgba(0,0,0,.4);--input-shading:rgba(255,255,255,.05)}
+:is(.theme-darker,.theme-light .theme-darker){--background-shading:rgba(0,0,0,.6);--card-shading:rgba(0,0,0,.3);--popout-shading:rgba(0,0,0,.7);--modal-shading:rgba(0,0,0,.5);--input-shading:rgba(255,255,255,.05)}
+:is(.theme-midnight,.theme-light .theme-midnight){--background-shading:rgba(0,0,0,.8);--card-shading:rgba(0,0,0,.4);--popout-shading:rgba(0,0,0,.8);--modal-shading:rgba(0,0,0,.6);--input-shading:rgba(255,255,255,.05)}
+
+:root{
+  --hsl-background-shading:hsl(from var(--background-shading) h calc(var(--saturation-factor,1) * s) l/alpha);
+  --hsl-card-shading:hsl(from var(--card-shading) h calc(var(--saturation-factor,1) * s) l/alpha);
+  --hsl-popout-shading:hsl(from var(--popout-shading) h calc(var(--saturation-factor,1) * s) l/alpha);
+  --hsl-modal-shading:hsl(from var(--modal-shading) h calc(var(--saturation-factor,1) * s) l/alpha);
+  --hsl-input-shading:hsl(from var(--input-shading) h calc(var(--saturation-factor,1) * s) l/alpha);
+  --hsl-input-border-shading:hsl(from var(--hsl-input-shading) h s l/.1);
+}
+
+:is(html,body,.appMount__51fd7){background:none}
+.app_a3002d{background:var(--hsl-background-shading);color:rgba(0,0,0,0)}
+.bg__960e4{background:var(--background-image) var(--background-position)/var(--background-size) no-repeat;background-attachment:var(--background-attachment);filter:var(--background-filter);z-index:-1}
+.chatContent_f75fb0,.scroller_f35c3c{background:hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * .4))}
+.menu_c1e9c4{background:var(--hsl-popout-shading);border:none;border-radius:5px}
+.numberBadge__2b1f5,.textBadge__2b1f5{background:var(--hsl-main-color)!important;color:var(--text-strong)}
+
+.button__201d5{border-radius:4px}
+.lookFilled__201d5:is(.colorBrand__201d5,.colorPrimary__201d5){background-color:var(--hsl-main-color);border:none}
+.lookFilled__201d5:is(.colorBrand__201d5,.colorPrimary__201d5):hover{background-color:var(--hsl-hover-color)}
+
+.channelTextArea__74017{background-color:var(--hsl-input-shading);box-shadow:0 0 0 2px var(--hsl-input-border-shading);border-color:rgba(0,0,0,0)}
+.channelTextArea__74017:focus-within{border-color:rgba(0,0,0,0);box-shadow:0 0 2px 2px var(--hsl-main-color)}
+
+.link__2ea32{transition:all .15s ease-in-out;margin-left:4px;position:relative}
+.link__2ea32::before{content:"";position:absolute;top:0;right:100%;bottom:0;left:0;transition:all .15s ease-in-out;z-index:-1;border-radius:4px}
+.wrapper__2ea32.modeSelected__2ea32 .link__2ea32::before{right:0;background:var(--channel-selected-bg);animation:cv-channel-select .3s ease-in-out}
+
+/* fixed readable Silvernium label in bar area */
+.bar_c38106{background-color:rgba(0,0,0,0);padding-left:0}
+.leading_c38106{gap:0;margin:0 6px}

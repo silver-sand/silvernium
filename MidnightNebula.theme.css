@@ -1,4 +1,54 @@
 /**
+ * @name Silvernium ClearLiquid
+ * @author silvernium
+ * @version 5.0.0
+ * @description Silvernium theme using local ClearVision-style base files.
+ */
+
+/* Local base (editable in this repo) */
+@import url("./main.css");
+@import url("./vencord.css");
+
+/* Silvernium identity + LiquidOS polish */
+.info__2debe::after {
+  content: "Silvernium 5.0.0" !important;
+  color: #cfe4ff !important;
+  text-shadow: 0 0 6px rgba(66, 140, 255, 0.5);
+}
+
+:is(.theme-dark, .theme-light):not(.platform-osx) .leading_c38106::before {
+  content: "Silvernium" !important;
+  color: #e8f3ff !important;
+  text-shadow: 0 0 8px rgba(58, 138, 255, 0.45);
+}
+
+:is(.theme-dark, .theme-light):not(.platform-osx) .leading_c38106::after {
+  content: "5.0.0" !important;
+  color: #b9cbee !important;
+}
+
+/* Keep wordmark override too */
+[class*="wordmarkWindows"]::after,
+[class*="wordmark"]::after {
+  content: "Silvernium" !important;
+  color: #dbeaff !important;
+  text-shadow: 0 0 5px rgba(80, 146, 255, 0.45);
+}
+
+[class*="wordmarkWindows"] > svg,
+[class*="wordmark"] > svg {
+  opacity: 0 !important;
+}
+
+/* Slightly more liquid cards */
+.menu_c1e9c4,
+.userPopoutOuter_c69a7b,
+.root__49fc1,
+.recentMentionsPopout__95796,
+.messagesPopoutWrap__45690 {
+  border-radius: 14px !important;
+  backdrop-filter: blur(14px) saturate(125%);
+  -webkit-backdrop-filter: blur(14px) saturate(125%);
  * @name Silvernium iOS 26 Liquid Glass
  * @author silvernium
  * @version 4.2.0
