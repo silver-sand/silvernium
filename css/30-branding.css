@@ -30,6 +30,11 @@
 [class*="wordmarkWindows"]::after,
 [class*="wordmark"]::after {
   content: "Silvernium" !important;
+/* remove ClearVision nameplate remnants */
+[class*="wordmarkWindows"]::after,
+[class*="wordmark"]::after {
+  content: "Silvernium" !important;
+  letter-spacing: 0.2px;
 }
 
 [class*="wordmarkWindows"] > svg,
