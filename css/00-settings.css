@@ -1,0 +1,33 @@
+:root {
+  --main-color: #62beff;
+  --hover-color: #3f99f0;
+  --success-color: #43b581;
+  --danger-color: #b14963;
+
+  --online-color: #43b581;
+  --idle-color: #faa61a;
+  --dnd-color: #b14963;
+  --streaming-color: #6a4bc2;
+  --offline-color: #7f8797;
+
+  --lios-bg-0: #02040b;
+  --lios-bg-1: #050b1a;
+  --lios-bg-2: #09142d;
+  --lios-bg-3: #0e2047;
+
+  --lios-glass-top: rgba(206, 232, 255, 0.24);
+  --lios-glass-mid: rgba(98, 149, 238, 0.13);
+  --lios-glass-low: rgba(16, 30, 68, 0.68);
+  --lios-glass-border: rgba(184, 220, 255, 0.34);
+  --lios-glass-edge: rgba(221, 239, 255, 0.5);
+
+  --lios-text: #f3f8ff;
+  --lios-text-muted: #9ab3de;
+  --lios-radius-xl: 24px;
+  --lios-radius-lg: 18px;
+  --lios-radius-sm: 10px;
+  --lios-shadow-soft: 0 10px 34px rgba(0, 4, 16, 0.68);
+  --lios-ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --lios-duration-fast: 180ms;
+  --lios-duration-medium: 340ms;
+}

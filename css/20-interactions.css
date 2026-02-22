@@ -1,0 +1,57 @@
+/* Flicker fix */
+.interactive_bf202d,
+.channel__972a0,
+.modeSelected__2ea32 .link__2ea32,
+.mention,
+.item_b3f026 {
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  transition:
+    background var(--lios-duration-fast) var(--lios-ease-smooth),
+    border-color var(--lios-duration-fast) var(--lios-ease-smooth),
+    box-shadow var(--lios-duration-fast) var(--lios-ease-smooth),
+    opacity var(--lios-duration-fast) var(--lios-ease-smooth);
+}
+
+.modeSelected__2ea32 .link__2ea32,
+.interactive_bf202d:hover,
+.channel__972a0:hover,
+.mention,
+.item_b3f026[aria-selected="true"] {
+  background: linear-gradient(145deg, rgba(85, 162, 255, 0.3), rgba(117, 161, 255, 0.24) 54%, rgba(36, 66, 141, 0.32)) !important;
+  border-color: rgba(171, 208, 255, 0.36);
+  color: var(--lios-text) !important;
+  border-radius: var(--lios-radius-sm);
+}
+
+/* squishy buttons */
+.lookFilled__201d5.colorBrand__201d5,
+.rolePillBorder__5f725,
+.numberBadge__2b1f5,
+.newMessagesBar__0f481,
+.circleIconButton__5bc7e,
+button {
+  background: linear-gradient(132deg, var(--main-color), #93b6ff 58%, #7ce1ff) !important;
+  color: #041229 !important;
+  border: 1px solid rgba(216, 236, 255, 0.65);
+  border-radius: 999px;
+  box-shadow: 0 10px 24px rgba(44, 126, 255, 0.38);
+  transform: scale(1);
+  opacity: 1;
+  transition:
+    transform 140ms var(--lios-ease-smooth),
+    box-shadow 180ms var(--lios-ease-smooth),
+    filter 180ms var(--lios-ease-smooth),
+    opacity 180ms ease;
+}
+
+.lookFilled__201d5.colorBrand__201d5:active,
+.rolePillBorder__5f725:active,
+.numberBadge__2b1f5:active,
+.newMessagesBar__0f481:active,
+.circleIconButton__5bc7e:active,
+button:active {
+  transform: scale(0.94);
+  opacity: 0.82;
+  filter: saturate(1.12) brightness(0.96);
+}

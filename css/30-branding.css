@@ -1,0 +1,11 @@
+/* remove ClearVision nameplate remnants */
+[class*="wordmarkWindows"]::after,
+[class*="wordmark"]::after {
+  content: "Silvernium" !important;
+  letter-spacing: 0.2px;
+}
+
+[class*="wordmarkWindows"] > svg,
+[class*="wordmark"] > svg {
+  opacity: 0 !important;
+}
