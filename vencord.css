@@ -1,0 +1,22 @@
+/*! Silvernium Vencord layer */
+.vc-card-base,
+.vc-addon-card,
+.vc-settings-quickActions-pill {
+  background: var(--hsl-card-shading) !important;
+  border: 1px solid transparent !important;
+}
+
+.vc-settings-quickActions-pill:hover,
+.vc-plugin-ui-elements-button:hover {
+  border-color: var(--hsl-main-color) !important;
+}
+
+.vc-btn-primary {
+  background: var(--hsl-main-color) !important;
+  border: none !important;
+  border-radius: 4px;
+}
+
+.vc-btn-primary:hover {
+  background: var(--hsl-hover-color) !important;
+}

@@ -1,0 +1,138 @@
+/* Silvernium main.css - ClearVision-style base restored */
+@keyframes cv-channel-select { from { right: 100%; } to { right: 0; } }
+
+:root {
+  --main-color: #2780e6;
+  --hover-color: #1e63b3;
+  --success-color: #43b581;
+  --danger-color: #982929;
+  --warning-color: #fff;
+  --info-color: #fff;
+
+  --online-color: #43b581;
+  --idle-color: #faa61a;
+  --dnd-color: #982929;
+  --streaming-color: #593695;
+  --offline-color: #808080;
+
+  --background-shading-percent: 100%;
+  --background-image:
+    radial-gradient(62rem 40rem at 12% 14%, rgba(83, 170, 255, 0.22), transparent 60%),
+    radial-gradient(54rem 35rem at 88% 12%, rgba(122, 156, 255, 0.2), transparent 60%),
+    radial-gradient(46rem 28rem at 50% 102%, rgba(47, 101, 215, 0.28), transparent 72%),
+    linear-gradient(160deg, #02040b, #050b1a 38%, #09142d 70%, #0e2047);
+  --background-position: center;
+  --background-size: cover;
+  --background-attachment: fixed;
+  --background-filter: saturate(calc(var(--saturation-factor, 1) * 1));
+
+  --user-popout-image: var(--background-image);
+  --user-popout-position: var(--background-position);
+  --user-popout-size: var(--background-size);
+  --user-popout-attachment: var(--background-attachment);
+  --user-popout-filter: var(--background-filter);
+
+  --user-modal-image: var(--background-image);
+  --user-modal-position: var(--background-position);
+  --user-modal-size: var(--background-size);
+  --user-modal-attachment: var(--background-attachment);
+  --user-modal-filter: var(--background-filter);
+
+  --main-font: "gg sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --code-font: Consolas, "gg mono", "Liberation Mono", Menlo, Courier, monospace;
+
+  --channel-normal: var(--interactive-text-default);
+  --channel-muted: var(--interactive-muted);
+  --channel-hover: var(--interactive-text-hover);
+  --channel-selected: var(--interactive-text-active);
+  --channel-selected-bg: var(--main-color);
+  --channel-unread: var(--main-color);
+  --channel-unread-hover: var(--hover-color);
+  --focus-color: var(--main-color);
+
+  --lios-radius-xl: 18px;
+  --lios-radius-lg: 12px;
+  --lios-radius-sm: 8px;
+  --lios-ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+  --lios-duration-fast: 180ms;
+
+  --hsl-main-color: hsl(from var(--main-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+  --hsl-hover-color: hsl(from var(--hover-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+  --hsl-success-color: hsl(from var(--success-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+  --hsl-danger-color: hsl(from var(--danger-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+  --hsl-online-color: hsl(from var(--online-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+  --hsl-idle-color: hsl(from var(--idle-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+  --hsl-dnd-color: hsl(from var(--dnd-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+  --hsl-streaming-color: hsl(from var(--streaming-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+  --hsl-offline-color: hsl(from var(--offline-color) h calc(var(--saturation-factor, 1) * s) l/alpha);
+}
+
+:is(.theme-midnight, .theme-light .theme-midnight) {
+  --background-shading: rgba(0, 0, 0, 0.8);
+  --card-shading: rgba(0, 0, 0, 0.4);
+  --popout-shading: rgba(0, 0, 0, 0.8);
+  --modal-shading: rgba(0, 0, 0, 0.6);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: #dcdcde;
+  --muted-text: #86868e;
+}
+
+:is(.theme-dark, .theme-light .theme-dark) {
+  --background-shading: rgba(0, 0, 0, 0.4);
+  --card-shading: rgba(0, 0, 0, 0.2);
+  --popout-shading: rgba(0, 0, 0, 0.6);
+  --modal-shading: rgba(0, 0, 0, 0.4);
+  --input-shading: rgba(255, 255, 255, 0.05);
+  --normal-text: #d8d8db;
+  --muted-text: #aeaeb4;
+}
+
+:root {
+  --hsl-background-shading: hsl(from var(--background-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
+  --hsl-card-shading: hsl(from var(--card-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
+  --hsl-popout-shading: hsl(from var(--popout-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
+  --hsl-modal-shading: hsl(from var(--modal-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
+  --hsl-input-shading: hsl(from var(--input-shading) h calc(var(--saturation-factor, 1) * s) l/alpha);
+}
+
+:is(html, body, .appMount__51fd7, .appMount, .bg__12180, .app_a3002d) { background: none; }
+
+.bg__960e4,
+.bg__12180,
+.appMount,
+.app_a3002d {
+  background: var(--background-image) var(--background-position)/var(--background-size) no-repeat !important;
+  background-attachment: var(--background-attachment) !important;
+  filter: var(--background-filter);
+}
+
+.app_a3002d { color: transparent; }
+
+.wrapper__6e9f8,
+.container__133bf,
+.sidebar_a4d4d9,
+.privateChannels__35e86,
+.chat_f75fb0,
+.chatContent_f75fb0,
+.scroller_f35c3c,
+.members_c8ffbb,
+.peopleColumn__133bf,
+.nowPlayingColumn__133bf,
+.container__551b0 {
+  background: hsl(from var(--hsl-background-shading) h s l/calc(var(--background-shading-percent) * 0.35)) !important;
+  border: none !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.menu_c1e9c4,
+.userPopoutOuter_c69a7b,
+.root__49fc1,
+.recentMentionsPopout__95796,
+.messagesPopoutWrap__45690,
+.popout_a16aea {
+  background: var(--hsl-popout-shading) !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: var(--lios-radius-lg);
+}
