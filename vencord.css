@@ -20,3 +20,36 @@
 .vc-btn-primary:hover {
   background: var(--hsl-hover-color) !important;
 }
+/*! Silvernium - local Vencord Addon layer */
+.vc-btn-primary{background:linear-gradient(130deg,#73cbff,#a6c5ff 56%,#86ebff)!important;border:1px solid rgba(225,240,255,.8)!important;color:#041021!important;border-radius:999px;box-shadow:0 12px 28px rgba(58,131,243,.44),inset 0 1px 0 rgba(255,255,255,.5)}
+.vc-btn-primary:hover{filter:brightness(1.05)}
+.vc-switch-container{background:hsl(from var(--interactive-text-default) h s l/0.2)!important}
+.vc-switch-container.vc-switch-checked{background:var(--hsl-main-color)!important}
+.vc-switch-container.vc-switch-checked path{fill:var(--hsl-main-color)}
+.vc-card-base{background:var(--hsl-card-shading);border:1px solid rgba(184,220,255,.24);backdrop-filter:blur(14px) saturate(145%);-webkit-backdrop-filter:blur(14px) saturate(145%)}
+.vc-plugin-ui-elements-button:hover{background:var(--hsl-card-shading);border:1px solid var(--hsl-main-color)}
+.vc-settings-quickActions-pill{background:var(--hsl-card-shading);border:1px solid rgba(184,220,255,.24);border-radius:999px}
+.vc-settings-quickActions-pill:hover{background:var(--hsl-card-shading);box-shadow:none;border-color:var(--hsl-main-color);transform:none}
+.vc-addon-card{background:var(--hsl-card-shading);border:1px solid rgba(184,220,255,.24);backdrop-filter:blur(12px)}
+.vc-addon-card:hover{background:var(--hsl-card-shading);transform:none;box-shadow:none}
+.vc-notification-root{background:var(--hsl-popout-shading);border:1px solid rgba(184,220,255,.24)}
+.vc-btn-primary{background:var(--hsl-main-color);border-color:rgba(0,0,0,0);border-radius:999px}
+/*! Silvernium - Vencord Addon local */
+/*! Silvernium - local Vencord Addon base */
+.vc-btn-primary{background:var(--hsl-main-color);border-color:rgba(0,0,0,0);border-radius:4px}
+.vc-btn-primary:hover{background:var(--hsl-hover-color);border-color:rgba(0,0,0,0)}
+.vc-switch-container{background:hsl(from var(--interactive-text-default) h s l/0.2)!important}
+.vc-switch-container.vc-switch-checked{background:var(--hsl-main-color)!important}
+.vc-switch-container.vc-switch-checked path{fill:var(--hsl-main-color)}
+.vc-card-base{background:var(--hsl-card-shading);border:1px solid rgba(184,220,255,.2)}
+.vc-plugin-ui-elements-button:hover{background:var(--hsl-card-shading);border:1px solid var(--hsl-main-color)}
+.vc-settings-quickActions-pill{background:var(--hsl-card-shading);border:1px solid rgba(184,220,255,.2);border-radius:999px}
+.vc-settings-quickActions-pill:hover{background:var(--hsl-card-shading);box-shadow:none;border-color:var(--hsl-main-color);transform:none}
+.vc-addon-card{background:var(--hsl-card-shading);border:1px solid rgba(184,220,255,.2)}
+.vc-card-base{background:var(--hsl-card-shading);border:1px solid rgba(0,0,0,0)}
+.vc-plugin-ui-elements-button:hover{background:var(--hsl-card-shading);border:1px solid var(--hsl-main-color)}
+.vc-settings-quickActions-pill{background:var(--hsl-card-shading);border:1px solid rgba(0,0,0,0)}
+.vc-settings-quickActions-pill:hover{background:var(--hsl-card-shading);box-shadow:none;border-color:var(--hsl-main-color);transform:none}
+.vc-addon-card{background:var(--hsl-card-shading);border:none}
+.vc-addon-card:hover{background:var(--hsl-card-shading);transform:none;box-shadow:none}
+.vc-notification-root{background:var(--hsl-popout-shading)}
