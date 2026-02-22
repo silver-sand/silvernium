@@ -1,3 +1,80 @@
+@keyframes cv-channel-select {
+  from { right: 100%; }
+  to { right: 0; }
+}
+
+/* channel behavior close to ClearVision */
+.link__2ea32,
+.interactive__972a0 {
+  transition: all .15s ease-in-out;
+  border-radius: 4px;
+  position: relative;
+}
+
+.link__2ea32::before,
+.interactive__972a0::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  bottom: 0;
+  left: 0;
+  transition: all .15s ease-in-out;
+  z-index: -1;
+  border-radius: 4px;
+}
+
+.wrapper__2ea32.modeSelected__2ea32 .link__2ea32,
+.interactive__972a0.interactiveSelected__972a0 {
+  background-color: transparent !important;
+}
+
+.wrapper__2ea32.modeSelected__2ea32 .link__2ea32::before,
+.interactive__972a0.interactiveSelected__972a0::before {
+  right: 0;
+  background: var(--hsl-main-color);
+  animation: cv-channel-select .3s ease-in-out;
+}
+
+/* squishy buttons but closer to clearvision fills */
+.lookFilled__201d5:is(.colorBrand__201d5, .colorPrimary__201d5),
+.vc-btn-primary,
+button.lookFilled__201d5 {
+  background: var(--hsl-main-color) !important;
+  border: none !important;
+  border-radius: 4px;
+  transition: transform 120ms ease, opacity 160ms ease, background-color 160ms ease;
+}
+
+.lookFilled__201d5:is(.colorBrand__201d5, .colorPrimary__201d5):hover,
+.vc-btn-primary:hover,
+button.lookFilled__201d5:hover {
+  background: var(--hsl-hover-color) !important;
+}
+
+.lookFilled__201d5:is(.colorBrand__201d5, .colorPrimary__201d5):active,
+.vc-btn-primary:active,
+button.lookFilled__201d5:active {
+  transform: scale(0.96);
+  opacity: 0.86;
+}
+
+.numberBadge__2b1f5,
+.textBadge__2b1f5 {
+  background: var(--hsl-main-color) !important;
+}
+
+/* Vencord cards */
+.vc-card-base,
+.vc-addon-card,
+.vc-settings-quickActions-pill {
+  background: var(--hsl-card-shading) !important;
+  border: 1px solid transparent !important;
+}
+
+.vc-settings-quickActions-pill:hover,
+.vc-plugin-ui-elements-button:hover {
+  border-color: var(--hsl-main-color) !important;
 /* Flicker fix */
 .interactive_bf202d,
 .channel__972a0,
